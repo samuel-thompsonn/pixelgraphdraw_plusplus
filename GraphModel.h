@@ -9,7 +9,7 @@
 
 class GraphModel {
   public:
-    GraphModel(int width, int height, int xVerts, int yVerts, float gridSize, Vector<3> cameraPos, std::function<float(float x, float y)> func);
+    GraphModel(Vector<2> screenDims, Vector<2> start, Vector<2> end, int xVerts, int yVerts, Vector<3> cameraPos, std::function<float(float x, float y)> func);
     void update();
     PixelMatrix* getColorMatrix(); // TODO: maybe use subscriber pattern instead?
     void setGraphRotation(float rotation);

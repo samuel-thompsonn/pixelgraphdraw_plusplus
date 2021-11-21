@@ -1,7 +1,11 @@
-SCREEN_SIZE       120
-VERTICES_X        32
-VERTICES_Y        16
-GRID_SQUARE_SIZE  2.5
-CAMERA_POS        48.0 -48.0 60.0
+SCREEN_SIZE       80
+START_X           -30.0
+START_Y           -30.0
+END_X             30.0
+END_Y             30.0
+VERTICES_X        20
+VERTICES_Y        20
+CAMERA_POS        16.0 -32.0 30.0
 FUNCTION          5
-ROTATION          300.0
+ROTATION          60.0
+ROTATION_DELTA    5.0

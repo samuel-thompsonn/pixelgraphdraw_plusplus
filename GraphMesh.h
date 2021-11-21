@@ -9,7 +9,7 @@
 
 class GraphMesh {
   public:
-    GraphMesh(int xVerts, int yVerts, float cellSize, std::function<float(float x, float y)> func);
+    GraphMesh(Vector<2> start, Vector<2> end, int numXVerts, int numYVerts, std::function<float(float x, float y)> func);
     void renderSelf(PixelMatrix &pixels, DepthBuffer &zBuffer, Vector<3> cameraPos);
     void setRotation(float rotation) { myRotation = rotation; }
     void update();

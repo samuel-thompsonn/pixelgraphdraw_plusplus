@@ -1,13 +1,12 @@
 #include "GraphMesh.h"
 
-GraphMesh::GraphMesh(int xVerts, int yVerts, float cellSize, std::function<float(float x, float y)> func)
-  : myPoints(yVerts, xVerts, cellSize, func) {
+GraphMesh::GraphMesh(Vector<2> start, Vector<2> end, int numXVerts, int numYVerts, std::function<float(float x, float y)> func)
+  : myPoints(start, end, numXVerts, numYVerts, func) {
 
   myRotation = (30.0f / 360.0f) * (2 * PI);
 
-  for (int i = 0; i < xVerts - 1; i ++) {
-    for (int j = 0; j < yVerts - 1; j ++) {
-      Vector<3> v1 = myPoints.getPoint(i, j);
+  for (int i = 0; i < numYVerts - 1; i ++) {
+    for (int j = 0; j < numXVerts - 1; j ++) {
       myTriangles.push_back(*(new Triangle(
         {
           myPoints.getPoint(i, j),
